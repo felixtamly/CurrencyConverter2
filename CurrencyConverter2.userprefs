@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{56E4DCA6-48A7-40D0-BE96-145ADAFBEA57}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CurrencyConverter2/Program.cs">
+    <Files>
+      <File FileName="CurrencyConverter2/Program.cs" Line="161" Column="46" />
+      <File FileName="CurrencyConverter2/XmlToCurrencyListConverter.cs" Line="11" Column="47" />
+      <File FileName="CurrencyConverter2/Currency.cs" Line="7" Column="16" />
+      <File FileName="CurrencyConverter2/FromEURConverter.cs" Line="10" Column="10" />
+      <File FileName="CurrencyConverter2/RateFinder.cs" Line="21" Column="32" />
+      <File FileName="CurrencyConverter2/ToEURConverter.cs" Line="15" Column="51" />
+      <File FileName="CurrencyConverter2/FreeConverter.cs" Line="18" Column="10" />
+      <File FileName="CurrencyConverter2/ListConverter.cs" Line="19" Column="89" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.CurrencyConverter2 PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
