@@ -14,10 +14,13 @@ namespace CurrencyConverter2
             RateFinder RateFinder = new RateFinder(CurrencyList);
             FromEURConverter FromEURConverter = new FromEURConverter(CurrencyList);
             ToEURConverter ToEURConverter = new ToEURConverter(CurrencyList);
+            FreeConverter FreeConverter = new FreeConverter(CurrencyList);
             int ChoiceInput = 0;
             double ValueInput = 0.0;
             string NameInput = null;
             double ValueResult = 0.0;
+            string OriginalNameInput = null;
+            string TargetNameInput = null;
 
             //MENU
             Console.WriteLine("*****MENU*****");
@@ -25,7 +28,8 @@ namespace CurrencyConverter2
             Console.WriteLine("2. Find exchange rate");
             Console.WriteLine("3. Convert from Euro");
             Console.WriteLine("4. Convert to Euro");
-            Console.WriteLine("5. Log out");
+            Console.WriteLine("5. Free Converter");
+            Console.WriteLine("6. Log out");
             try
             {
 				ChoiceInput = Int32.Parse(Console.ReadLine());
@@ -115,8 +119,40 @@ namespace CurrencyConverter2
                         Main(args);
                     }
                     break;
-                //5. Log out
                 case 5:
+                    Console.WriteLine("Enter original currency:");
+                    OriginalNameInput = Console.ReadLine();
+                    if(!RateFinder.CurrencyExists(OriginalNameInput.ToUpper()))
+                    {
+                        Console.WriteLine("Your input was invalid");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Enter original amount: ");
+                        try
+                        {
+                            ValueInput = Double.Parse(Console.ReadLine());
+                        }
+                        catch (FormatException e)
+                        {
+                            Console.WriteLine("Your input was invalid");
+                        }
+                        Console.WriteLine("Enter target currency:");
+                        TargetNameInput = Console.ReadLine();
+                        if(!RateFinder.CurrencyExists(TargetNameInput.ToUpper()))
+                        {
+                            Console.WriteLine("Your input was invalid");
+                        }
+                        else
+                        {
+                            ValueResult = FreeConverter.Convert(TargetNameInput, OriginalNameInput, ValueInput);
+                            Console.WriteLine("You can get {0} {1} from {2} {3}.", Math.Round(ValueResult, 2), TargetNameInput.ToUpper(), Math.Round(ValueInput, 2), OriginalNameInput.ToUpper());
+                        }
+                    }
+					Main(args);
+                    break;
+                //6. Log out
+                case 6:
                     Environment.Exit(1);
                     break;
                 default:
