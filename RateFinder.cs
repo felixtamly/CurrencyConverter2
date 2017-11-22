@@ -6,7 +6,7 @@ namespace CurrencyConverter2
 {
     public class RateFinder
     {
-        readonly List<Currency> CurrencyList = new List<Currency>();
+        readonly List<Currency> CurrencyList;
 
         public RateFinder(List<Currency> CurrencyList)
         {

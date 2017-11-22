@@ -1,14 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace CurrencyConverter2
 {
     public class FromEURConverter
     {
-        public FromEURConverter()
+        readonly List<Currency> CurrencyList;
+        public FromEURConverter(List<Currency> CurrencyList)
         {
+            this.CurrencyList = CurrencyList;
         }
-        public void ConvertFromEUR()
+        public double ConvertFromEUR(string Name, double eur)
         {
-            
+            RateFinder RateFinder = new RateFinder(CurrencyList);
+            double rate = RateFinder.FindRate(Name);
+            return eur * rate;
         }
     }
 }
