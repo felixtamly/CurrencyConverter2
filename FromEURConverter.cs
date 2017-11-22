@@ -6,5 +6,9 @@ namespace CurrencyConverter2
         public FromEURConverter()
         {
         }
+        public void ConvertFromEUR()
+        {
+            
+        }
     }
 }

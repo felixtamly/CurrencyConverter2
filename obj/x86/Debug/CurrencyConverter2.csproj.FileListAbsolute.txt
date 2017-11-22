@@ -1,0 +1,5 @@
+/Users/felixtamly/Projects/CurrencyConverter2/CurrencyConverter2/obj/x86/Debug/CurrencyConverter2.csproj.CoreCompileInputs.cache
+/Users/felixtamly/Projects/CurrencyConverter2/CurrencyConverter2/bin/Debug/CurrencyConverter2.exe
+/Users/felixtamly/Projects/CurrencyConverter2/CurrencyConverter2/bin/Debug/CurrencyConverter2.pdb
+/Users/felixtamly/Projects/CurrencyConverter2/CurrencyConverter2/obj/x86/Debug/CurrencyConverter2.exe
+/Users/felixtamly/Projects/CurrencyConverter2/CurrencyConverter2/obj/x86/Debug/CurrencyConverter2.pdb
