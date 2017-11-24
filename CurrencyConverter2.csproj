@@ -41,6 +41,7 @@
     <Compile Include="RateFinder.cs" />
     <Compile Include="ToEURConverter.cs" />
     <Compile Include="FreeConverter.cs" />
+    <Compile Include="ListConverter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

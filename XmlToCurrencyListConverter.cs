@@ -10,6 +10,7 @@ namespace CurrencyConverter2
         {
             XmlReader XmlReader = XmlReader.Create("https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml");
             List<Currency> CurrencyList = new List<Currency>();
+            CurrencyList.Add(new Currency("EUR", 1));
             try
             {
                 while (XmlReader.Read())

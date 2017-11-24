@@ -10,6 +10,7 @@ namespace CurrencyConverter2
         {
             XmlToCurrencyListConverter XmlConverter = new XmlToCurrencyListConverter();
 			var CurrencyList = new List<Currency>();
+            var NewCurrencyList = new List<Currency>();
 			CurrencyList = XmlConverter.GetCurrencyList();
             RateFinder RateFinder = new RateFinder(CurrencyList);
             FromEURConverter FromEURConverter = new FromEURConverter(CurrencyList);
@@ -29,7 +30,8 @@ namespace CurrencyConverter2
             Console.WriteLine("3. Convert from Euro");
             Console.WriteLine("4. Convert to Euro");
             Console.WriteLine("5. Free Converter");
-            Console.WriteLine("6. Log out");
+            Console.WriteLine("6. Change exchange rate base");
+            Console.WriteLine("7. Log out");
             try
             {
 				ChoiceInput = Int32.Parse(Console.ReadLine());
@@ -151,8 +153,23 @@ namespace CurrencyConverter2
                     }
 					Main(args);
                     break;
-                //6. Log out
+                //6.  Change exchange rate base
                 case 6:
+                    ListConverter ListConverter = new ListConverter(CurrencyList);
+                    Console.WriteLine("Enter new base currency:");
+                    NameInput = Console.ReadLine();
+                    if(RateFinder.CurrencyExists(NameInput.ToUpper()))
+                    {
+                        NewCurrencyList = ListConverter.Convert(NameInput.ToUpper());
+                    }
+                    foreach(Currency Currency in NewCurrencyList)
+                    {
+                        Console.WriteLine(Currency);
+                    }
+                    Main(args);
+                    break;
+                //7. Log out
+                case 7:
                     Environment.Exit(1);
                     break;
                 default:
